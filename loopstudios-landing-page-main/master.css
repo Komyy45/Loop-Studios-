@@ -1,0 +1,330 @@
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+ul{
+    list-style: none;
+}
+.landing{
+    background-image: url(images/desktop/image-hero.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-position: left;
+    display: flex;
+    align-items: center;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 ;
+    height: 72px;
+    position: absolute;
+    width: calc(100% - 200px);
+}
+.links{
+    display: flex;
+    font-family: 'Alata', sans-serif;
+}
+.links li a{
+    padding: 10px 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: capitalize;
+    position: relative;
+}
+.links li a::after{
+    content: "";
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+.links li a:hover::after{
+    width: 20%;
+}
+
+h2{
+    background-color: transparent;
+    color: white;
+    font-size: 64px;
+    border: 2px solid white;
+    padding: 40px;
+    padding-right: 70px;
+    font-weight: 300;
+    max-width: 600px;
+    word-spacing: 10px;
+    text-transform: uppercase;
+}
+.container{
+    padding: 100px;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.container .head i{
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: none;
+}
+.container .head i:hover{
+    color: gainsboro;
+}
+.vr{
+    margin: 60px 0;
+    height: calc(100vh + 100px);
+}
+.vr .container{
+    display: flex;
+    position: relative;
+
+}
+.vr .image{
+    margin: 0 auto 0 60px;
+}
+.vr .text{
+    padding: 100px;
+    width: 500px;
+    z-index: 2;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+}
+.vr .text h3{
+    font-size: 48px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+.vr .text p{
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    color: hsl(0, 0%, 55%);
+}
+@media (max-width: 1400px){
+    .vr .image{
+        margin: 0;
+        max-width: 100%;
+    }
+    img{
+        max-width: 100%;
+    }
+    .vr{
+        height: fit-content;
+    }
+    .vr .text{
+        padding: 30px;
+        z-index: 2;
+        background-color: white;
+        position:unset;
+    }
+    .vr .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .vr .text h3{
+        width: 100%;
+    }
+    .vr .text p{
+        width: 100%;
+}}
+
+.creations{
+    padding-top: 60px;
+    padding-bottom: 120px;
+}
+.creations .container .games{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(275px , 1fr));
+    gap: 20px;
+}
+.creations .container .games img{
+    width: 100%; 
+}
+.creations .container .games .image{
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.creations .container .games .image:hover::after{
+    opacity: 0.4;
+}
+.creations .container .games .image:hover::before{
+    color: black;
+}
+.creations .container .games .image::before{
+    content: attr(dataname);
+    position: absolute;
+    width: 57.5%;
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+    font-size: 38px;
+    font-weight: 300;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-55%);
+    z-index: 4;
+    transition: 0.3s;
+}
+.creations .container .games .image::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    transition: 0.3s;
+}
+.creations .container .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.creations .container .header h3{
+    color: black;
+    font-weight: 300;
+    font-size: 42px;
+}
+.creations .container .header button{
+    border: 2px solid black;
+    background-color: white;
+    padding: 10px 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.creations .container .header button:hover{
+    background-color: black;
+    color: white;
+}
+.footer{
+    background-color: black; 
+}
+.footer .container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.footer .left .logo{
+    padding-left: 15px;
+}
+.footer .left .links{
+    padding: 0;
+    margin-top: 15px;
+    
+}
+.footer .right{
+color: white;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+.footer .right .social{
+    align-self: flex-end;
+}
+.footer .right .social i{
+    position: relative;
+    font-size: 28px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.footer .right .social i:hover::after{
+    width: 100%;
+}
+.footer .right .social i::after{
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 5px;
+    background-color: white;
+    width: 0;
+    height: 2px;
+    transition: 0.3s;
+}
+.footer .right .social p{
+    color: hsl(0, 0%, 55%);
+}
+
+@media (max-width: 792px) {
+    .container{
+        padding: 0 10px;
+    }
+    .container .head i{
+        display: block;
+    }
+    .container .head{
+        width: calc(100% - 30px);
+    }
+    .container .head .links{
+        position: absolute;
+        display: flex;
+        z-index: 2;
+        background-color: rgb(0, 0 , 0 , 0.7);
+        width: calc(100% - 30px);
+        height: 100vh;
+        flex-direction: column;
+        left: -200%;
+        top: -20px;
+        text-align: center;
+        padding: 20px;
+    }
+    .container .head .links li{
+        padding: 25px 0 ;
+    }
+    .container .head .links a{
+        width: 100%;
+        height: 100%;
+    }
+    .landing .container h2{
+        font-size: 36px;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+    .landing{
+        justify-content: center;
+    }
+    .footer .container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer .container .links{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer .container .links li:not(:first-of-type){
+        margin-top: 10px;
+    }
+    .footer .container .right .social{
+        align-self: center;
+    }
+}
+@media (max-width: 375) {
+    .landing .container h2{
+        font-size: 32px;
+        width:  fit-content;
+    }
+}
